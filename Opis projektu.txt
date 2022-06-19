@@ -1,0 +1,23 @@
+s23099 Vladyslav Stelmakh
+
+Analiza nastrojów na Twitterze za pomocą BERT
+
+Ten projekt koncentruje się na analizie tweetów na temat koronawirusa w celu przeprowadzenia analizy sentymentu za pomocą algorytmu BERT do przewidywania emocji tweeta (pozytywnych, negatywnych lub neutralnych). W szczególności BERT zostanie dostrojony przy użyciu danego zestawu danych, aby poprawić ogólną wydajność modelu.
+Tweety będą starannie pozbawione linków, hashtagów na końcu zdań i znaków interpunkcyjnych, zanim zostaną przekazane do algorytmów, aby algorytmy mogły lepiej zrozumieć tekst i poprawić wydajność przewidywania.
+Tak wysokie wyniki można osiągnąć jedynie poprzez dobre czyszczenie danych źródłowych, które pozwoli algorytmom wydobyć z nich maksymalne korzyści.
+W szczególności model podstawowy naiwnego klasyfikatora bayesa został również przeszkolony do przeprowadzania klasyfikacji sentymentu, co dało dokładność i F1 na poziomie około 70%.
+Trening BERT zabierał około 200 minut na epokę (w sumie 4 epoki) na GPU dla każdego algorytmu, ponieważ oba parametry przetwornika (ponad 100 milionów) zostały dostrojone tak, aby osiągnąć najlepsze wyniki na danym zestawie danych. Możliwe jest wytrenowanie tylko ostatniej warstwy przetwornika bez dostrajania pozostałych parametrów: jednak zwykle skutkuje to gorszymi wynikami w porównaniu z podejściem dostrajania.
+
+Biblioteki
+Numpy
+Pandas
+Tensorflow
+Matplotlib
+Seaborn
+re
+string
+emoji
+nltk
+sklearn 
+Imblearn
+
